@@ -1,0 +1,20 @@
+examine command:
+ (gdb) x
+
+examine display format:
+ (gdb) x/o => display octal
+ (gdb) x/x => display hexaecimal
+ (gdb) x/u => display in unsigned, standard base-10 decimal
+ (gdb) x/t => display in binary
+ (gdb) x/i => display assembler in struction in memory
+
+examine multiple address units:
+ (gdb) x/3x => will display the 3 adjacent memory addesses in hex
+
+examine valid size letters:
+ (gdb) x/3xb => display the 3 adjacent memory addresses divided by bytes
+ (gdb) x/3xh => display the 3 adjacent memory addresses divided by 2 bytes
+ (gdb) x/3x2 => display the 3 adjacent memory addresses divided by words(4 bytes)
+ (gdb) x/3xg => display the 3 adjacent memory addresses divided by 8 bytes
+
+
