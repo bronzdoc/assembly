@@ -1,0 +1,19 @@
+Linux System Call Table for x86_64:
+http://blog.rchapman.org/post/36801038863/linux-system-call-table-for-x86-64
+
+As we can read in System V AMD64 ABI, the first six function arguments passed in registers. They are:
+
+    rdi - first argument
+    rsi - second argument
+    rdx - third argument
+    rcx - fourth argument
+    r8 - fifth argument
+    r9 - sixth
+
+Next arguments will be passed in the stack. So if we have function like this:
+
+    int foo(int a1, int a2, int a3, int a4, int a5, int a6, int a7) {
+        return (a1 + a2 - a3 - a4 + a5 - a6) * a7;
+    }
+
+The first six arguments will be passed in the registers, but 7th argument will be passed in the stack.
